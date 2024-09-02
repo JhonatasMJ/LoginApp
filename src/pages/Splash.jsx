@@ -5,7 +5,7 @@ import { WaveIndicator } from "react-native-indicators";
 const Splash = ({ navigation }) => {
   React.useEffect(() => {
     const timer = setTimeout(() => {
-      navigation.navigate("Login");
+      navigation.navigate("Home");
     }, 3000);
 
     return () => clearTimeout(timer);

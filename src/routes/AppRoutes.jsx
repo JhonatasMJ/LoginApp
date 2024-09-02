@@ -1,14 +1,14 @@
-import Login from "../pages/login.js";
-import Register from "../pages/register.js";
-import Home from "../pages/Home.js";
-import Splash from "../pages/Splash.js";
+import Login from "../pages/login.jsx";
+import Register from "../pages/register.jsx";
+import Home from "../pages/Home.jsx";
+import Splash from "../pages/Splash.jsx";
 import {createNativeStackNavigator} from "@react-navigation/native-stack";
 
 const Stack = createNativeStackNavigator();
 
- const StackNavigation = () => {
+ const AppRoutes = () => {
   return (
-    <Stack.Navigator initialRouteName="Splash">
+    <Stack.Navigator initialRouteName="Home">
       <Stack.Screen 
         name="Splash"
         component={Splash}
@@ -30,6 +30,7 @@ const Stack = createNativeStackNavigator();
         name="Home"
         component={Home}
         options={{title:'Tela Inicial'}}
+
       />
              
     </Stack.Navigator>
@@ -38,4 +39,4 @@ const Stack = createNativeStackNavigator();
 
 
 
-export default StackNavigation;
+export default AppRoutes;
