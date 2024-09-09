@@ -1,10 +1,12 @@
+import { useContext } from "react";
 import AppRoutes from "./AppRoutes.jsx";
 import AuthRoutes from "./AuthRoutes.jsx";
+import Auth from "../contexts/auth.jsx";
 
 const Routes = () => {
-  const user = 'null';
+  const {signed} = useContext(Auth)
 
-  return <>{user ? <AuthRoutes /> : <AppRoutes />}</>;
+  return <>{ signed ? <AuthRoutes /> : <AppRoutes />}</>;
 };
 
 export default Routes;

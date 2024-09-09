@@ -1,5 +1,6 @@
 import login from "../pages/login.jsx";
 import Ionicons from "react-native-vector-icons/Ionicons";
+import Home from "../pages/Home.jsx"
 import styles from '../styles/StyleMenu.jsx';
 
 
@@ -11,7 +12,7 @@ const AuthRoutes = () => {
   return (
     <>
       <Tab.Navigator style={styles.menu}
-        initialRouteName="Splash"
+        initialRouteName="Home"
         screenOptions={({ route }) => ({
           tabBarIcon: ({ focused, color, size }) => {
             let iconName;
@@ -24,18 +25,17 @@ const AuthRoutes = () => {
               iconName = focused ? "person-circle" : "person-circle-outline";
             }
 
-            // You can return any component that you like here!
             return <Ionicons name={iconName} size={size} color={color} />;
           },
           tabBarStyle: styles.menu,
-          tabBarActiveTintColor: "red",
+          tabBarActiveTintColor: "white",
           tabBarInactiveTintColor: "gray",
         })}
       >
-        <Tab.Screen
-          name="login"
-          component={login}
-          options={{ title: "Login" }}
+            <Tab.Screen
+          name="Home"
+          component={Home}
+          options={{ title: "Home" }}
         />
       </Tab.Navigator>
     </>

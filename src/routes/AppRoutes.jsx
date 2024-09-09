@@ -8,7 +8,7 @@ const Stack = createNativeStackNavigator();
 
  const AppRoutes = () => {
   return (
-    <Stack.Navigator initialRouteName="Home">
+    <Stack.Navigator >
       <Stack.Screen 
         name="Splash"
         component={Splash}
@@ -25,14 +25,7 @@ const Stack = createNativeStackNavigator();
       name="Register" 
       component={Register}
       options={{title:'Registro Acesso'}}
-       />
-    <Stack.Screen 
-        name="Home"
-        component={Home}
-        options={{title:'Tela Inicial'}}
-
-      />
-             
+       />    
     </Stack.Navigator>
   );
 }

@@ -1,5 +1,6 @@
 
 import { StatusBar } from "expo-status-bar";
+import { useContext } from "react";
 import {
   StyleSheet,
   Text,
@@ -8,12 +9,20 @@ import {
   TextInput,
   TouchableOpacity,
 } from "react-native";
+import Authg from "../contexts/auth";
 
 const Home = ({navigation}) => {
+const { signed, email, token} = useContext(Authg)
+
   return (
     <View style={styles.container}>
       <Image source={require("../../assets/favicon.png")} style={styles.logo} />
       <Text style={styles.titulo}>Tela Inicial</Text>
+      <Text> Email: {email} </Text>
+      <Text> Token: {token} </Text>
+      <Text> Logado:{signed} </Text>
+ 
+
       
     </View>
   );
