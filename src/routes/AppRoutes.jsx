@@ -26,6 +26,12 @@ const Stack = createNativeStackNavigator();
       component={Register}
       options={{title:'Registro Acesso'}}
        />    
+       
+      <Stack.Screen 
+      name="Home" 
+      component={Home}
+      options={{title:'Home'}}
+       />   
     </Stack.Navigator>
   );
 }

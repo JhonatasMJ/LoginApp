@@ -7,8 +7,21 @@ import {
   TextInput,
   TouchableOpacity,
 } from "react-native";
+import { LoginUsuario } from "../services/authFirebase";
 
 const Login = ({navigation}) => {
+
+
+  const onClickEntrar = async () => {
+    const userLogin = await LoginUsuario();
+/*     navigation.navigate('Home', {name: 'home'}) */
+  };
+
+  const onClickRegistrar = ( ) => {
+    navigation.navigate('Registro', {name: 'registro'})
+  }
+
+
   return (
     <View style={styles.container}>
       <Image source={require("../../assets/favicon.png")} style={styles.logo} />
@@ -29,8 +42,7 @@ const Login = ({navigation}) => {
             placeholder="Digite sua Senha"
           ></TextInput>
         </View>
-        <TouchableOpacity style={styles.btn}   onPress={() =>
-              navigation.navigate("Home", { name:"Home" })}   > 
+        <TouchableOpacity style={styles.btn} onPress={onClickEntrar}    > 
           <Text style={styles.btnTexto}>Acessar</Text>
         </TouchableOpacity>
         <View style={styles.contasContainer}>

@@ -5,7 +5,7 @@ const Authg = createContext({});
 export const AuthProvider = ({children}) => {
     return (
         <Authg.Provider 
-            value={{ signed: true, 
+            value={{ signed: false, 
             token: "adkaokdskdaksd", 
             email: "jhonatasjhmj@gmail.com",
             }}>
